@@ -24,7 +24,7 @@
 ## Assumptions
 - Since there is no given set of IDs, I have randomly generated IDs of length 12-36.
 - Not retrying in case of duplicates.
-- Did not add a retry logic for limit exceeded exception because the I don't except that scenario to be hit due to configuration of the thread pool.
+- Did not add a retry logic for limit exceeded exception because the I don't expect that scenario to be hit due to configuration of the thread pool.
 - No retrying in case of server exceptions, but there should be a retry to ensure the request is served.
 - For this exercise haven't used timeout, but generally I would consider using a timeout for the request depending on the latency of the API.
 ## File Structure
