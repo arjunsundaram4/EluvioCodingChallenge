@@ -23,14 +23,18 @@
 - Written a python which uses thread pool service of size 5 to do the task at hand efficiently.
 ## Assumptions
 - Since there is no given set of IDs, I have randomly generated IDs of length 12-36.
+- Not retrying in case of duplicates.
+- Did not add a retry logic for limit exceeded exception because the I don't except that scenario to be hit due to configuration of the thread pool.
+- No retrying in case of server exceptions, but there should be a retry to ensure the request is served.
+- For this exercise haven't used timeout, but generally I would consider using a timeout for the request depending on the latency of the API.
 ## File Structure
-- [Application.py](Application.py) is the main file containing the thread service and calling of all the individual functions I have written.
+- [Application.py](Application.py) is the main file containing the threading service and calling of all the individual functions I have written.
 - [Utils.py](Utils.py) contains the helper function for API requests.
-- [Generator.py](Generator.py) containts the functions for ID generation and base 64 conversion of the ID.
+- [Generator.py](Generator.py) contains the functions for ID generation and base 64 conversions of the ID.
 
 ## How to run this
 - py Application.py should get the program running and you can see the output on the console.
 
 ## Requirements
 - Python 3.8
-- All packagees used are generic python libraries so no specific installation required.
+- All packages used are generic python libraries so no specific installation is required.
