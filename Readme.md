@@ -33,7 +33,7 @@
 - [Generator.py](Generator.py) contains the functions for ID generation and base 64 conversions of the ID.
 
 ## How to run this
-- py Application.py should get the program running and you can see the output on the console.
+- python Application.py should get the program running and you can see the output on the console.
 
 ## Requirements
 - Python 3.8
