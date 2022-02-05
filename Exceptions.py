@@ -2,16 +2,24 @@ from logging import exception
 
 
 class BadAuthorizationException(Exception):
-    print("Authorization header was missing/invalid")
+    def __init__(self, *args: object) -> None:
+        print("Authorization header was missing/invalid")
+        super().__init__(*args)
 
 
 class TooManyRequestException(Exception):
-    print("Too many concurent requests made")
+    def __init__(self, *args: object) -> None:
+        print("Too many concurent requests made")
+        super().__init__(*args)
 
 
 class NotFoundException(Exception):
-    print("No response found for ID")
+    def __init__(self, *args: object) -> None:
+        print("No response found for ID")
+        super().__init__(*args)
 
 
 class APIException(Exception):
-    print("Error Calling the API")
+    def __init__(self, *args: object) -> None:
+        print("Error Calling the API")
+        super().__init__(*args)
